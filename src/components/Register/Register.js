@@ -42,7 +42,7 @@ class Register extends Component {
     })
       .then((response) => response.json())
       .then((user) => {
-        if (user.id && this.validateEmail(this.state.email)) {
+        if (user._id && this.validateEmail(this.state.email)) {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
